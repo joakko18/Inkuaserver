@@ -10,7 +10,7 @@ router.get('/proyectos', async (req, res) => {
   try {
     const pool = req.app.locals.pool;
     const query = `
-      SELECT title, description, url FROM url;
+      SELECT url,title, description url FROM url;
     `;
 
     const result = await pool.query(query);
