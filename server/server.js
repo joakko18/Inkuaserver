@@ -78,8 +78,8 @@ app.post("/create_preference", (req, res) => {
       }
     ],
     back_urls: {
-      "success": "http://localhost:5000/",
-      "failure": "http://localhost:5000/",
+      "success": "https://inkuaserver-production.up.railway.app/",
+      "failure": "https://inkuaserver-production.up.railway.app/",
       "pending": ""
     },
     auto_return: "approved",
