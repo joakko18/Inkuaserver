@@ -46,7 +46,7 @@ pool.on('error', (err, client) => {
 });
 
 // Set up CORS to allow requests from your front-end application (adjust origins as needed)
-app.use(cors({ origin: 'https://grand-maamoul-75b3b3.netlify.app' }));
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 // Define your routes and middleware
 app.use(express.json({limit:"25mb"}));
@@ -56,7 +56,7 @@ app.use('/api', endpointsRouter);
 
 // Additional CORS configuration for the specific route
 // Allow this route to receive requests from a different origin, if needed.
-app.post('/api/upload', cors({ origin: 'https://grand-maamoul-75b3b3.netlify.app' }), endpointsRouter);
+app.post('/api/upload', cors({ origin: 'http://localhost:3000' }), endpointsRouter);
 
 
 // REPLACE WITH YOUR ACCESS TOKEN AVAILABLE IN: https://developers.mercadopago.com/panel
